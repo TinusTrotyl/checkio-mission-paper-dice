@@ -1,0 +1,68 @@
+
+<p>
+This mission is an advanced '<a href='https://py.checkio.org/en/mission/identify-block/' >identify-block</a>'.
+</p>
+<p>
+You have to write a code to check a development drawing of the dice.
+</p>
+<p>
+The input represents a development drawing of one die.
+It is a list of String.
+These strings are the same lenght and consist of 1 to 6 digits and a space only. 
+These digits represents each face of the dice.
+</p>
+<ul>
+    <li>If the development is rihgt, return True.</li>
+    <li>If the followng cases, return False:</li>
+    <ul>
+        <li>You can not complete a cube.</li>
+        <li>When the sum of the top and bottom does not always become 7.
+    </ul>
+</ul>
+
+<!--
+<div class="for_info_only">
+    <p style="text-align: left;">
+        <img  title="example" src="{{MEDIA}}nonogram_row_example.png" alt="example" style="max-height: 244px"/>
+    </p>
+</div>
+-->
+
+<div class="for_info_only">
+    <p><strong>Example:</strong></p>
+    <pre class="brush: python">
+paper_dice(['  1  ',
+            ' 235 ',
+            '  6  ',
+            '  4  ']) == True
+
+paper_dice(['    ',
+            '12  ',
+            ' 36 ',
+            '  54',
+            '    ']) == True
+
+paper_dice(['123456']) == False
+paper_dice(['123  ',
+            '  456']) == False</pre>
+</div>
+
+<p><strong>Input: </strong>A list of String.</p>
+
+<p><strong>Output: </strong>The answer as a boolean.</p>
+
+<p>
+<!--
+<strong>How it is used:</strong><br>
+You will get the basis of nonogram-solver.  The actual nonogaram puzzles consists of multiple rows and also has clue numbers for the columns.
+All nonogram puzzles are designed to be able to identify all cells as 'filled' or 'empty' with these clue numbers.
+-->
+</p>
+
+<p>
+<strong>Precondition:</strong><br>
+<ul>
+    <li>all(len(row) == len(paper[0]) for row in paper)</li>
+    <li>all((cell in '123456 ' for cell in row) for row in paper)</li>
+</ul>
+</p>
